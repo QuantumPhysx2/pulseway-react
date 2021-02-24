@@ -18,6 +18,10 @@ export default function Sidenav() {
                     </ul>
                 </DropListLink>
 
+                <DropListLink title="Stock Market" iconLeft={<FaIcons.FaDollarSign className="nav-icon" />} text="Stock Market">
+                    <NavItem title="Live View" to="/live-view" icon={<FaIcons.FaChartLine className="nav-icon" />} text="Live View" />
+                </DropListLink>
+
                 <DropListLink title="God Powers" iconLeft={<FaIcons.FaLock className="nav-icon" />} text="God Powers">
                     <NavItem title="User Management" to="/user-management" icon={<FaIcons.FaUsers className="nav-icon" />} text="User Management" />
                     <NavItem title="Role Management" to="/role-management" icon={<FaIcons.FaKey className="nav-icon" />} text="Role Management" />
@@ -36,8 +40,8 @@ function DropListLink(props) {
     const [open, setOpen] = useState(false);
 
     return(
-        <li className="nav-link nav-title" title={props.title} onClick={() => setOpen(!open)}>
-            <div className="sub-menu-header">
+        <li className="nav-link nav-title" title={props.title}>
+            <div className="sub-menu-header" onClick={() => setOpen(!open)}>
                 {props.iconLeft}
                 <p className="nav-text">{props.text}</p>
                 <FaIcons.FaCaretDown className="nav-icon icon-right" />
