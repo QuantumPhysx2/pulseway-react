@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body,
+#root,
+.container,
+main {
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header,
+main,
+aside,
+footer {
+    display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li {
+    list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    background: #383847;
+}
+
+.nav-link {
+    font-size: 12px;
+}
+
+.nav-item {
+    color: #787c95;
+    cursor: pointer;
+    display: block;
+    padding: 14px 0;
+    position: relative;
+}
+
+.nav-icon,
+.nav-text {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.nav-icon {
+    font-size: 15px;
+    padding: 3px 8px;
+}
+
+.nav-icon-counter {
+    background: #7d829c;
+    border-radius: 5px;
+    color: #f8f6fa;
+    padding: 6px 3px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 20px;
+}
+
+.icon-right {
+    float: right;
+}
+
+aside {
+    background-color: #21212b;
+    display: inline-block;
+    height: 100%;
+    overflow-y: auto;
+    width: 275px;
+}
+
+.sidenav {
+    padding: 15px;
+}
+
+.sub-menu-header {
+    color: #787c95;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 14px 0;
+}
+
+.sub-menu-header:hover {
+    background: #3e3e52;
+    border-radius: 4px;
+    color: #bc97f1;
+}
+
+.sub-menu-content {
+    background: var(--fade-blue);
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.sub-menu-content .nav-item {
+    padding: 14px;
+}
+
+.sidenav .nav-item:hover {
+    background: #3e3e52;
+    border-radius: 4px;
+    color: #bc97f1;
+}
+
+.sidenav .active {
+    color: #d238eb !important;
 }
