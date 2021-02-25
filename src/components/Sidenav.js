@@ -22,6 +22,10 @@ export default function Sidenav() {
                     <NavItem title="Live View" to="/live-view" icon={<FaIcons.FaChartLine className="nav-icon" />} text="Live View" />
                 </DropListLink>
 
+                <DropListLink title="Login" iconLeft={<FaIcons.FaUserCircle className="nav-icon" />} text="Login">
+                    <NavItem title="Sign In" to="/sign-in" icon={<FaIcons.FaSignInAlt className="nav-icon" />} text="Sign In" />
+                </DropListLink>
+
                 <DropListLink title="God Powers" iconLeft={<FaIcons.FaLock className="nav-icon" />} text="God Powers">
                     <NavItem title="User Management" to="/user-management" icon={<FaIcons.FaUsers className="nav-icon" />} text="User Management" />
                     <NavItem title="Role Management" to="/role-management" icon={<FaIcons.FaKey className="nav-icon" />} text="Role Management" />
